@@ -9,3 +9,7 @@ test("Tessa")
 
 def age(age:int) -> None:
   print(f"Age is {age}")
+
+  #-----------------
+  input()
+  print()
