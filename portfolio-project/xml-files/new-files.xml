@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" layout="auto">
+    <mxGraphModel dx="954" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="4100" math="0" shadow="0">
+      <root>
+        <mxCell id="step0"/>
+        <mxCell id="step1" parent="0"/>
+
+        <mxCell id="2" value="Start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="200" width="90" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="394.5" y="240" as="sourcePoint"/>
+            <mxPoint x="394.5" y="320" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="394.5" y="240"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4" value="2. Decision Point (mummy_in_shop): Check if mummy_in_shop is True." style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="355" y="320" width="80" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="435" y="360" as="sourcePoint"/>
+            <mxPoint x="520" y="360" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="480" y="360"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="394.5" y="400" as="sourcePoint"/>
+            <mxPoint x="394.5" y="480" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="394.5" y="400"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="I enjoy playing football" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="330" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="394.5" y="540" as="sourcePoint"/>
+            <mxPoint x="394.5" y="620" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="394.5" y="540"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="I love singing" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="335" y="480" width="120" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="394.5" y="620" as="sourcePoint"/>
+            <mxPoint x="394.5" y="670" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="394.5" y="670"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="End" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="342.5" y="670" width="105" height="50" as="geometry"/>
+        </mxCell>
+
+
+        
+        <mxCell id="step2" value="1. Start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="350" y="200" width="90" height="40" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="step3" value="2. Decision Point (mummy_in_shop): Check if mummy_in_shop is True." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" connectable="0" connectEdges="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="60" y="80" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="step3" value="3. Yes (mummy_in_shop): Continue to the next decision point." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" connectable="0" connectEdges="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="60" y="140" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="step4" value="4. Decision Point (male_assistant): Check if male_assistant is True." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" connectable="0" connectEdges="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="60" y="200" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="step5" value="5. Yes (male_assistant): Continue to the next decision point." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" connectable="0" connectEdges="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="60" y="260" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="step6" value="6. Decision Point (female_assistant): Check if female_assistant is True." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" connectable="0" connectEdges="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="60" y="320" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="step7" value="7. Yes (female_assistant): Go to the action node 'print(\"Hello everyone\")'." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" connectable="0" connectEdges="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="60" y="380" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="step8" value="8. No (female_assistant): Go to the action node 'print(\"Good morning mama and male assistant\")'." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" connectable="0" connectEdges="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="60" y="440" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="step9" value="9. No (male_assistant): Go to the action node 'print(\"Good morning just mama\")'." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" connectable="0" connectEdges="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="60" y="500" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="step10" value="10. No (mummy_in_shop): Go to the decision point (mama_Adimma)." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" connectable="0" connectEdges="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="60" y="560" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="step11" value="11. Yes (mama_Adimma): Go to the action node 'print(\"greet mummy Adimma\")'." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" connectable="0" connectEdges="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="60" y="620" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="step12" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="394.5" y="620" as="sourcePoint"/>
+            <mxPoint x="394.5" y="670" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="394.5" y="670"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step13" value="12. No (mama_Adimma): Go to the action node 'print(\"None of them are around\")'." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" connectable="0" connectEdges="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="60" y="680" width="300" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="step14" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="394.5" y="620" as="sourcePoint"/>
+            <mxPoint x="394.5" y="670" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="394.5" y="670"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step15" value="13. End: The flowchart ends with an 'End' node." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" connectable="0" connectEdges="1" parent="jyD4hHv9G7B0pYs0pd-K-11">
+          <mxGeometry x="60" y="740" width="150" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

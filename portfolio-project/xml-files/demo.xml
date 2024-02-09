@@ -54,27 +54,37 @@
         <mxCell id="9" value="I love singing" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="335" y="480" width="120" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="10" value="hello-5" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+        
+        <mxCell id="10" value="hello-3" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="394.5" y="620" as="sourcePoint"/>
-            <mxPoint x="394.5" y="670" as="targetPoint"/>
+            <mxPoint x="585" y="390" as="sourcePoint"/>
+            <mxPoint x="585" y="470" as="targetPoint"/>
             <Array as="points">
-              <mxPoint x="394.5" y="670"/>
+              <mxPoint x="585" y="470"/>
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="11" value="End" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="11" value="I'm female" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="545" y="470" width="80" height="80" as="geometry"/>
+        </mxCell>
+         <mxCell id="12" value="hello-4" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="394.5" y="540" as="sourcePoint"/>
+            <mxPoint x="394.5" y="620" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="394.5" y="540"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="14" value="End" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="342.5" y="670" width="105" height="50" as="geometry"/>
         </mxCell>
-        <!-- <mxCell id="12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="4" target="10" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="550" y="500" as="sourcePoint"/>
-            <mxPoint x="400" y="610" as="targetPoint"/>
-            <Array as="points">
-              <mxPoint x="580" y="620"/>
-            </Array>
-          </mxGeometry>
-        </mxCell> -->
+
+
+
+         
+        
       </root>
     </mxGraphModel>
   </diagram>
