@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='calculator.css') }}" />
+    <!-- s<link rel="stylesheet" href="../static/calculator.css" /> -->
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="display" title="input" readonly placeholder="Output" />
+      <br />
+      <div class="first-div direction">
+        <button onclick="appendValue('1')">1</button>
+        <button onclick="appendValue('2')">2</button>
+        <button onclick="appendValue('3')">3</button>
+        <button onclick="setOperation('+')">+</button>
+      </div>
+      <br />
+      <div class="second-div direction">
+        <button onclick="appendValue('4')">4</button>
+        <button onclick="appendValue('5')">5</button>
+        <button onclick="appendValue('6')">6</button>
+        <button onclick="setOperation('-')">-</button>
+      </div>
+      <br />
+      <div class="third-div direction">
+        <button onclick="appendValue('7')">7</button>
+        <button onclick="appendValue('8')">8</button>
+        <button onclick="appendValue('9')">9</button>
+        <button onclick="setOperation('*')">*</button>
+      </div>
+      <br />
+      <div class="fourth-div direction">
+        <button onclick="appendValue('0')">0</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculateResult()">=</button>
+        <button onclick="setOperation('/')">/</button>
+      </div>
+    </div>
+
+    <script>
+      let currentInput = "";
+      let currentOperation = null;
+
+      function appendValue(value) {
+        document.getElementById("display").value += value;
+        currentInput += value;
+      }
+
+      function setOperation(operation) {
+        if (currentInput !== "") {
+          currentOperation = operation;
+          document.getElementById("display").value += operation;
+          currentInput = "";
+        }
+      }
+
+      function calculateResult() {
+        if (currentInput !== "" && currentOperation !== null) {
+          const expression = document.getElementById("display").value;
+          const result = eval(expression);
+          document.getElementById("display").value = result;
+          currentInput = result.toString();
+          currentOperation = null;
+        }
+      }
+
+      function clearDisplay() {
+        document.getElementById("display").value = "";
+        currentInput = "";
+        currentOperation = null;
+        A;
+      }
+    </script>
+  </body>
+</html>
