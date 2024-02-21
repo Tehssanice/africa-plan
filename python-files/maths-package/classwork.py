@@ -1,56 +1,52 @@
-# # Question 1: Create a list of strings and iterate over it to print the length of each string.
+# Question 1: Create a list of strings and iterate over it to print the length of each string.
  
-# string_list = ["apple", "Yam", "orange", "Rice", "Grape"]
+# food_list = ["Plantain", "Yam", "Opa", "Rice", "Soup"]
 
-# for item in string_list:
-#   # print(f"The length of '{item}' is {len(item)} characters.")
-  
-#   item_list = f"The length of '{item}' is {len(item)} characters."
-# # print(item_list) 
+# for item in food_list:
+#   print(f"The length of '{item}' is {len(item)} characters.")
 
 
-
-# # Question 2: Write a program to remove a specific item from the dictionary.
+# Question 2: Write a program to remove a specific item from the dictionary.
 
 # # Sample dictionary
-# list_items = {'name': 'Daniel', 'age': 50, 'country': 'Nigeria', 'gender': 'Male'}
+list_items = {'name': 'Daniel', 'age': 50, 'country': 'Nigeria', 'gender': 'Male'}
 
 
 # # Specify the item to be removed
-# item_to_remove = 'name'
+item_to_remove = 'country'
 
-# # Check if the key exists before removing it
-# if item_to_remove in list_items:
-#     # Remove the specified item from the dictionary
-#     del list_items[item_to_remove]
-#     # print(f" Item removed from the dictionary is {item_to_remove} .")
-#     # print(list_items)
+# Check if the key exists before removing it
+if item_to_remove in list_items:
+    # Remove the specified item from the dictionary
+    del list_items[item_to_remove]
+    print(f" Item removed from the dictionary is {item_to_remove} .")
+    print(list_items)
     
-# else:
-#     print(f"{item_to_remove} not found in the dictionary.")
+else:
+    print(f"{item_to_remove} not found in the dictionary.")
     
     
     
-# #Question 3: Create a program that takes a list of words as input and returns a dictionary where the keys are the words and the values are the lengths of the word 
+#Question 3: Create a program that takes a list of words as input and returns a dictionary where the keys are the words and the values are the lengths of the word 
 
 
-# def create_dictionary(list_of_words):
-#     # Create an empty dictionary
-#     word_dict = {}
+def create_dictionary(list_of_words):
+    # Create an empty dictionary
+    word_dict = {}
 
-#     # loop through the words in the list
-#     for word in list_of_words:
-#         # Assign the length of each word as the value for the corresponding key
-#         word_dict[word] = len(word)
+    # loop through the words in the list
+    for word in list_of_words:
+        # Assign the length of each word as the value for the corresponding key
+        word_dict[word] = len(word)
 
-#     return word_dict
+    return word_dict
 
-# # Get a list of words from the user
-# word_input = input("Enter a list of words separated by commas: ")
-# words = word_input.split(',')
+# Get a list of words from the user
+word_input = input("Enter a list of words separated by commas: ")
+words = word_input.split(',')
 
-# # Create the dictionary
-# print(create_dictionary(words))
+# Create the dictionary
+print(create_dictionary(words))
 
 
 # BONUS QUESTION
