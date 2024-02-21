@@ -76,8 +76,8 @@ def two_sum(nums, target):
     return None
 
 # Example usage:
-nums = [2, 7, 11, 15]
-target = 9
+nums = [4, 7, 9, 15]
+target = 16
 
 result = two_sum(nums, target)
 print(result)
