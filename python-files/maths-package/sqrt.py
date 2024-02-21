@@ -1,16 +1,18 @@
-def sqrt (number:int) -> float:
-  
-  """
-  This function helps to return the squaereroot of a provided number
-  input:number(int)
-  return:float
-  
-  """
-  return number ** 0.5
-solution = sqrt(16)
+def sqrt(number: int):
+    """
+    This function helps to return the squaereroot of a provided number
+    input:number(int)
+    return:float
+
+    """
+    return number ** 2
+
+
+solution = sqrt(3)
 print(solution)
 
-def get_cuberoot(number: int) -> float:
+
+def get_cuberoot(number: int) -> int:
     """
     This function helps to get the cube root of a provided number.
 
@@ -25,5 +27,7 @@ def get_cuberoot(number: int) -> float:
 
     # Return the result
     return cube_root
+
+
 result = get_cuberoot(8)
 print(result)
