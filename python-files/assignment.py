@@ -274,7 +274,7 @@ def common_items():
     print(f"Items that are common in both inventories are {items}")
 
 
-# common_items()
+common_items()
 
 # Question 2
 # Write a program that takes a list of dictionaries representing sales data for different products,
@@ -301,7 +301,8 @@ def total_sales():
         print(
             f" {product_name} total sale is :  {quantity_sold * price}")
 
-# total_sales()
+
+total_sales()
 
 
 # Question 3
@@ -324,7 +325,6 @@ word_freq = {
 # change the dict to a list of tuples to make the items in the dict accessible for sorting
 items_in_word_freq = list(word_freq.items())
 
-# print((items_in_word_freq[1][1]))
 
 # save the length of the list in a variable
 lib_length = ((len(items_in_word_freq)))
@@ -334,9 +334,9 @@ for index in range(lib_length):
         if items_in_word_freq[index][1] < items_in_word_freq[next_index][1]:
             items_in_word_freq[index], items_in_word_freq[next_index] = items_in_word_freq[next_index], items_in_word_freq[index]
 
-# print(" Word Frequency in Descending Order:")
-# for word, freq in items_in_word_freq:
-#     print(f"\t{word}: {freq}")
+print(" Word Frequency in Descending Order:")
+for word, freq in items_in_word_freq:
+    print(f"\t{word}: {freq}")
 
 # Question 4
 # Build a simple language translation tool using dictionaries. Design dictionaries to store mappings between words in different languages.
@@ -381,11 +381,11 @@ translator = {
     }
 }
 
-# for language, language_details in translator.items():
-#     for key, value in language_details.items():
-#         sentence = " ".join(language_details.keys())
-#         translated_sentence = " ".join(language_details.values())
-#     print(f"{sentence} is translated: \n\t{translated_sentence} in {language}")
+for language, language_details in translator.items():
+    for key, value in language_details.items():
+        sentence = " ".join(language_details.keys())
+        translated_sentence = " ".join(language_details.values())
+    print(f"{sentence} is translated: \n\t{translated_sentence} in {language}")
 
 
 # Question 5a
@@ -413,16 +413,6 @@ users = {
 }
 
 
-# new user creation
-# users.update(
-#     {'clara': {
-#         'password_hashes': 'password',
-#         'email_address': 'clara@gmail.com',
-#         'account status': 'active'
-#     }
-#     }
-# )
-
 # register
 def register(username, password, email, role):
     if username in users:
@@ -434,21 +424,21 @@ def register(username, password, email, role):
             'role': role,
             'account status': 'active'
         }
-    # print(f"{username} has been registered")
+    print(f"{username} has been registered")
 
 
-# register("jane", '1234', 'jane@gmail.com', 'user')
-# print(users)
+register("jane", '1234', 'jane@gmail.com', 'user')
+print(users)
 
 # update account info
 
-# for username, user_info in users.items():
-#     if user_info['account status'] == 'active':
-#         print(f"{username} is active and up to date")
-#     else:
-#         account_active = user_info['account status'] = 'active'
-# print(
-#     f" {username} has been updated: {account_active}")
+for username, user_info in users.items():
+    if user_info['account status'] == 'active':
+        print(f"{username} is active and up to date")
+    else:
+        account_active = user_info['account status'] = 'active'
+print(
+    f" {username} has been updated: {account_active}")
 
 
 def authentication(username, password):
@@ -458,8 +448,8 @@ def authentication(username, password):
         print("authentication failed")
 
 
-# authentication('jane', '1234')
-# print(users)
+authentication('jane', '1234')
+print(users)
 
 
 # Question 5b
@@ -505,7 +495,7 @@ def forecast():
             print("Weather is cool")
 
 
-# forecast()
+forecast()
 
 # Question 7
 # Create a recipe book application using dictionaries. Each recipe can have attributes such as name, ingredients, and instructions.
@@ -523,4 +513,30 @@ recipe_book = {
 # Build a project management tool that uses dictionaries to store project details. Each project has attributes such as name, start date, end date, and tasks.
 # Implement functions to add new projects, assign tasks to team members, and track project progress.
 
-project_manager = 
+projects = {}
+
+
+def add_new_project(name, start_date, end_date):
+    projects[name] = {
+        'start_date': start_date,
+        'end_date': end_date,
+        'tasks': [],
+        'status': 0
+    }
+
+
+add_new_project('Project11', '06-02-2024', '28-03-2024')
+
+
+def assign_task(project_name, task_description, team_member):
+    if project_name in projects:
+        projects[project_name]['tasks'].append(
+            {'description': task_description,
+             'assigned_to': team_member,
+             'status': 'Incomplete'})
+
+    else:
+        print(f"Project '{project_name}' not found.")
+
+
+assign_task('Project2', 'Task 5', 'Janet')

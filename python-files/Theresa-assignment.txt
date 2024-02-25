@@ -1,0 +1,266 @@
+######################## CLASSWORK ##############################
+# Question 1
+# Example inventories
+inventory1 = {"apple": 10, "banana": 5, "orange": 8, "grape": 12}
+inventory2 = {"apple": 15, "banana": 7, "grape": 10, "watermelon": 3}
+# Given two dictionaries above representing the inventory of two stores, write a program to
+# find the items that are common to both stores and their quantities.
+
+
+def common_items():
+    items = {}
+    for key, value in inventory1.items():
+        if key in inventory2:
+            items[key] = value + inventory2[key]
+    print(f"Items that are common in both inventories are {items}")
+
+
+common_items()
+
+# Question 2
+# Write a program that takes a list of dictionaries representing sales data for different products,
+# where each dictionary contains the product name, quantity sold, and price. Calculate the total
+# sales for each product and print a summary.
+
+sales_data = [
+    {"product": "apple", "quantity_sold": 100, "price": 0.5},
+    {"product": "banana", "quantity_sold": 80, "price": 0.4},
+    {"product": "orange", "quantity_sold": 120, "price": 0.6},
+    {"product": "grape", "quantity_sold": 60, "price": 0.8}
+]
+
+
+def total_sales():
+
+    print(f"Product Summary:")
+
+    for sale in sales_data:
+        product_name = sale["product"]
+        quantity_sold = sale["quantity_sold"]
+        price = sale["price"]
+
+        print(
+            f" {product_name} total sale is :  {quantity_sold * price}")
+
+total_sales()
+
+
+# Question 3
+# Implement a program that takes a dictionary of words and their frequencies and finds the top
+# n most frequent words efficiently.i would provide the value of n on testing
+
+word_freq = {
+    "hello": 10,
+    "world": 20,
+    "python": 15,
+    "programming": 5,
+    "is": 30,
+    "awesome": 12,
+    "dictionary": 8,
+    "challenge": 3,
+    "openai": 7,
+    "gpt": 9
+}
+
+# change the dict to a list of tuples to make the items in the dict accessible for sorting
+items_in_word_freq = list(word_freq.items())
+
+
+# save the length of the list in a variable
+lib_length = ((len(items_in_word_freq)))
+
+for index in range(lib_length):
+    for next_index in range(index + 1, lib_length):
+        if items_in_word_freq[index][1] < items_in_word_freq[next_index][1]:
+            items_in_word_freq[index], items_in_word_freq[next_index] = items_in_word_freq[next_index], items_in_word_freq[index]
+
+print(" Word Frequency in Descending Order:")
+for word, freq in items_in_word_freq:
+    print(f"\t{word}: {freq}")
+
+# Question 4
+# Build a simple language translation tool using dictionaries. Design dictionaries to store mappings between words in different languages.
+# Write a function that takes a sentence in one language as input and translates it into another language using the dictionary mappings. Heavily use basic python types
+
+
+translator = {
+    'spanish': {
+        'I': 'Yo',
+        'am': 'soy',
+        'doing': 'haciendo',
+        'amazing': 'increible'
+
+    },
+    'latin': {
+        'I': 'Ego',
+        'am': 'sum',
+        'bold': 'audax',
+        'and': 'et',
+        'beautiful': 'pulchra'
+
+    },
+    'french': {
+        'The': 'le',
+        'sky': 'ciel',
+        'is': 'est',
+        'bright': 'clair',
+        'today': "aujourd'hui"
+
+    },
+    'japanese': {
+        'I': '私',
+        'live': 'ライブ',
+        'healthy': '健康',
+
+    },
+    'Igbo': {
+        'life': 'Ndu',
+        'is': 'di',
+        'good': 'mma'
+
+    }
+}
+
+for language, language_details in translator.items():
+    for key, value in language_details.items():
+        sentence = " ".join(language_details.keys())
+        translated_sentence = " ".join(language_details.values())
+    print(f"{sentence} is translated: \n\t{translated_sentence} in {language}")
+
+
+# Question 5a
+
+# Develop a user authentication system for a website using dictionaries. Design a dictionary
+# where the keys are usernames and the values are dictionaries containing password hashes,
+# email addresses, and account statuses (e.g., active or inactive). Write functions to register
+# new users, authenticate existing users, and update account information.
+
+users = {
+    'Monday': {
+        'password_hash': 'password',
+        'email_address': 'monday@gmail.com',
+        'account status': 'active',
+        'role': 'admin'
+
+    },
+    'Luke': {
+        'password_hash': 'password',
+        'email_address': 'luke@gmail.com',
+        'account status': 'inactive',
+        'role': 'user'
+
+    },
+}
+
+
+
+# register
+def register(username, password, email, role):
+    if username in users:
+        print(f"{username} already exists")
+    else:
+        users[username] = {
+            'password_hash': password,
+            'email_address': email,
+            'role': role,
+            'account status': 'active'
+        }
+    print(f"{username} has been registered")
+
+
+register("jane", '1234', 'jane@gmail.com', 'user')
+print(users)
+
+# update account info
+
+for username, user_info in users.items():
+    if user_info['account status'] == 'active':
+        print(f"{username} is active and up to date")
+    else:
+        account_active = user_info['account status'] = 'active'
+print(
+    f" {username} has been updated: {account_active}")
+
+
+def authentication(username, password):
+    if users.get(username, {}).get("password_hash") == password:
+        print("authentication successful")
+    else:
+        print("authentication failed")
+
+
+authentication('jane', '1234')
+print(users)
+
+
+# Question 6
+# Create a program that takes a dictionary representing the weather forecast for a week. Each
+# key is a day of the week (e.g., "Monday", "Tuesday") and the value is the forecasted
+# temperature. Check if the temperature is above 80 degrees Fahrenheit for at least three
+# consecutive days. If it is, print a message indicating a heatwave warning.
+
+weather = {
+    'sunday': 32,
+    'monday': 65,
+    'tuesday': 40,
+    'wednesday': 82,
+    'thursday': 88,
+    'friday': 49,
+    'saturday': 90
+
+}
+
+
+def forecast():
+    for key, value in weather.items():
+        if value > 80:
+            print("A heat wave is coming")
+        else:
+            print("Weather is cool")
+
+
+forecast()
+
+# Question 7
+# Create a recipe book application using dictionaries. Each recipe can have attributes such as name, ingredients, and instructions.
+# Write functions to add new recipes, search for recipes by ingredient, and generate shopping lists.
+
+recipe_book = {
+    'recipe1': {
+        'name': 'jollof rice',
+        'ingredients': ['tomato', 'carrot', 'rice', 'water', 'salt', 'pepper'],
+        'instructions': ['Boil the rice for twenty minutes', 'blend the tomato and pepper']
+    }
+}
+
+# Question 8
+# Build a project management tool that uses dictionaries to store project details. Each project has attributes such as name, start date, end date, and tasks.
+# Implement functions to add new projects, assign tasks to team members, and track project progress.
+
+projects = {}
+
+
+def add_new_project(name, start_date, end_date):
+    projects[name] = {
+        'start_date': start_date,
+        'end_date': end_date,
+        'tasks': [],
+        'status': 0
+    }
+
+
+add_new_project('Project11', '06-02-2024', '28-03-2024')
+
+
+def assign_task(project_name, task_description, team_member):
+    if project_name in projects:
+        projects[project_name]['tasks'].append(
+            {'description': task_description,
+             'assigned_to': team_member,
+             'status': 'Incomplete'})
+
+    else:
+        print(f"Project '{project_name}' not found.")
+
+
+assign_task('Project2', 'Task 5', 'Janet')
