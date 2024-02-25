@@ -400,11 +400,15 @@ users = {
         'password_hash': 'password',
         'email_address': 'monday@gmail.com',
         'account status': 'active',
+        'role': 'admin'
+
     },
     'Luke': {
         'password_hash': 'password',
         'email_address': 'luke@gmail.com',
         'account status': 'inactive',
+        'role': 'user'
+
     },
 }
 
@@ -420,32 +424,42 @@ users = {
 # )
 
 # register
-def register(username, password, email):
+def register(username, password, email, role):
     if username in users:
         print(f"{username} already exists")
     else:
         users[username] = {
-            'password_hashes': password,
+            'password_hash': password,
             'email_address': email,
+            'role': role,
             'account status': 'active'
         }
-    print(f"{username} has been registered")
+    # print(f"{username} has been registered")
 
 
-register("jane", '1234', 'jane@gmail.com')
-print(users)
+# register("jane", '1234', 'jane@gmail.com', 'user')
+# print(users)
 
 # update account info
 
-for username, user_info in users.items():
-    if user_info['account status'] == 'active':
-        print(f"{username} is active and up to date")
-    else:
-        account_active = user_info['account status'] = 'active'
-        print(
-            f" {username} has been updated: {account_active}")
+# for username, user_info in users.items():
+#     if user_info['account status'] == 'active':
+#         print(f"{username} is active and up to date")
+#     else:
+#         account_active = user_info['account status'] = 'active'
+# print(
+#     f" {username} has been updated: {account_active}")
 
-# authenticate
+
+def authentication(username, password):
+    if users.get(username, {}).get("password_hash") == password:
+        print("authentication successful")
+    else:
+        print("authentication failed")
+
+
+# authentication('jane', '1234')
+# print(users)
 
 
 # Question 5b
@@ -455,14 +469,58 @@ for username, user_info in users.items():
 # • If the user is an admin, grant them full access.
 # • If the user is a regular user, grant them restricted access.
 
+def role_authentication(username, role):
+    if users.get(username, {}).get('role') == role:
+        print("permission granted")
+    else:
+        print("Permission denied")
+
+
+# role_authentication('jane', 'user')
+
+
 # Question 6
 # Create a program that takes a dictionary representing the weather forecast for a week. Each
 # key is a day of the week (e.g., "Monday", "Tuesday") and the value is the forecasted
 # temperature. Check if the temperature is above 80 degrees Fahrenheit for at least three
 # consecutive days. If it is, print a message indicating a heatwave warning.
 
+weather = {
+    'sunday': 32,
+    'monday': 65,
+    'tuesday': 40,
+    'wednesday': 82,
+    'thursday': 88,
+    'friday': 49,
+    'saturday': 90
+
+}
+
+
+def forecast():
+    for key, value in weather.items():
+        if value > 80:
+            print("A heat wave is coming")
+        else:
+            print("Weather is cool")
+
+
+# forecast()
+
 # Question 7
 # Create a recipe book application using dictionaries. Each recipe can have attributes such as name, ingredients, and instructions.
 # Write functions to add new recipes, search for recipes by ingredient, and generate shopping lists.
+
+recipe_book = {
+    'recipe1': {
+        'name': 'jollof rice',
+        'ingredients': ['tomato', 'carrot', 'rice', 'water', 'salt', 'pepper'],
+        'instructions': ['Boil the rice for twenty minutes', 'blend the tomato and pepper']
+    }
+}
+
+# Question 8
 # Build a project management tool that uses dictionaries to store project details. Each project has attributes such as name, start date, end date, and tasks.
 # Implement functions to add new projects, assign tasks to team members, and track project progress.
+
+project_manager = 
