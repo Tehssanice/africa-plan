@@ -25,6 +25,12 @@ body {
   margin-bottom: 50px;
   text-align: right;
 }
+
+.d-flex {
+  display: flex;
+  margin: 5px auto;
+  width: 70%;
+}
 .weapons {
   width: 90%;
   margin: auto;
