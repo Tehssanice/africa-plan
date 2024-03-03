@@ -1,4 +1,4 @@
-Hey there, thia is file handling.  
+Hey there, this is file handling.  
  Character	Meaning 
  'r'	open for reading (default)
  'w'	open for writing, truncating the file first
@@ -6,4 +6,5 @@ Hey there, thia is file handling.
  'a'	open for writing, appending to the end of the file if it exists 
  'b'	binary mode 
  't'	text mode (default)
- '+'	open a disk file for updating (reading and writing)I just made some correction
+ 'r+'	open a file for updating (reading and writing)
+ I just learnt how to update

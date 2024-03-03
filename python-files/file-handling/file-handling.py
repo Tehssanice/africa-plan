@@ -1,20 +1,28 @@
 import os
 
-file = open("example.txt", "w")
-file.write("Hey there, thia is file handling.  "
-           "\n Character	Meaning "
-           "\n 'r'	open for reading (default)"
-           "\n 'w'	open for writing, truncating the file first"
-           "\n 'x'	create a new file and open it for writing "
-           "\n 'a'	open for writing, appending to the end of the file if it exists "
-           "\n 'b'	binary mode "
-           "\n 't'	text mode (default)"
-           "\n '+'	open a disk file for updating (reading and writing)")
-file.close()
+file1 = open("example.txt", "w")
+file1.write("Hey there, this is file handling.  "
+            "\n Character	Meaning "
+            "\n 'r'	open for reading (default)"
+            "\n 'w'	open for writing, truncating the file first"
+            "\n 'x'	create a new file and open it for writing "
+            "\n 'a'	open for writing, appending to the end of the file if it exists "
+            "\n 'b'	binary mode "
+            "\n 't'	text mode (default)"
+            "\n 'r+'	open a file for updating (reading and writing)")
 
 
-with open("example.txt", "a") as file:
-    file.write("I just made some correction")
+file1 = open("example.txt", "a+")
+file1.write("\n I just learnt how to update")
+
+file1.seek(0)
+
+print(file1.read())
+
+file1.close()
+
+# for w+, we write then read
+# for r+, we read then write
 
 
 # The code below checks for a file which does not exist and uses the FileNotFoundError to handle exceptions
