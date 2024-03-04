@@ -78,10 +78,10 @@
 //   console.log(value);
 // });
 
-// // for of
-// for (const items of cars) {
-//   console.log(items);
-// }
+// for of
+for (const items of cars) {
+  console.log(items);
+}
 
 // // do while loop
 // // while loop

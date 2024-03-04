@@ -30,6 +30,7 @@ body {
   display: flex;
   margin: 5px auto;
   width: 70%;
+  justify-content: space-between;
 }
 .weapons {
   width: 90%;
