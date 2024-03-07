@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Functional Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="calculator">
+        <h1>Tessa's Calculator</h1>
+        <input type="text" id="display2" disabled placeholder=" " title="input" maxlength="19" />
+        <input type="text" id="display" disabled placeholder="0" title="input" maxlength="19" />
+        <br />
+
+        <div>
+          <button class="power-btn" data-off-on onclick="togglePower()">OFF</button>
+          <button onclick="operator('%'), clearDisplay()">%</button>
+          <button onclick="backspace()">BS</button>
+          <button onclick="clearDisplay(), clearDisplay2()">AC</button>
+        </div>
+
+        <div>
+          <button onclick="appendToDisplay('7')">7</button>
+          <button onclick="appendToDisplay('8')">8</button>
+          <button onclick="appendToDisplay('9')">9</button>
+          <button onclick="operator('/'), clearDisplay()">/</button>
+        </div>
+
+        <div>
+          <button onclick="appendToDisplay('4')">4</button>
+          <button onclick="appendToDisplay('5')">5</button>
+          <button onclick="appendToDisplay('6')">6</button>
+          <button onclick="operator('*'), clearDisplay()">*</button>
+        </div>
+
+        <div>
+          <button onclick="appendToDisplay('1')">1</button>
+          <button onclick="appendToDisplay('2')">2</button>
+          <button onclick="appendToDisplay('3')">3</button>
+          <button onclick="operator('-'), clearDisplay()">-</button>
+        </div>
+
+        <div>
+          <button onclick="appendToDisplay('0')">0</button>
+          <button onclick="appendToDisplay('.')">.</button>
+          <button onclick="calculateResult(),clearDisplay2()">=</button>
+          <button onclick="operator('+'), clearDisplay()">+</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>

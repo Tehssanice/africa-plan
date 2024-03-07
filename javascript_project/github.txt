@@ -1,0 +1,17 @@
+version control :- Tracking and managing your changes in your files;
+ v1, v2, v3, 
+
+---- AT FIRST -----
+echo "# africanplan-public" >> README.md // create file README.md and adds "# africanplan-public"
+git init // packaging your project github ( create a local repository)
+git add . // packaging your project github
+git commit -m "here is the label of the commit(version)"
+git branch -M main // this just make "made" the main branch
+git remote add origin https://github.com/theodoremca/africanplan-public.git  // connect the online repository to your local repository
+git push -u origin main // send the version to the local repository
+
+
+---- AFTER MORE CHANGE -----
+git add . 
+git commit -m "second africanplan"
+git push

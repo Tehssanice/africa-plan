@@ -194,7 +194,6 @@ section .section-5 .top-row p {
   width: 75%;
   margin: 5px auto;
   line-height: 25px;
-  /* font-size: 25px; */
 }
 
 section .section-5 .lower-row {
@@ -223,4 +222,8 @@ section .section-5 .last-row button {
   border: none;
   color: #fff;
   border-radius: 9px;
+}
+
+section .section-5 .lower-row .left-div h3 {
+  margin-top: 60px;
 }
