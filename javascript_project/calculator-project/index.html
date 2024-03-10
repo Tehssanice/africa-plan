@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <div id="calculator">
-        <h1>Tessa's Calculator</h1>
+        <h1>Functional Calculator</h1>
         <input type="text" id="display2" disabled placeholder=" " title="input" maxlength="19" />
         <input type="text" id="display" disabled placeholder="0" title="input" maxlength="19" />
         <br />
@@ -22,30 +22,30 @@
         </div>
 
         <div>
-          <button onclick="appendToDisplay('7')">7</button>
-          <button onclick="appendToDisplay('8')">8</button>
-          <button onclick="appendToDisplay('9')">9</button>
+          <button onclick="addToInput('7')">7</button>
+          <button onclick="addToInput('8')">8</button>
+          <button onclick="addToInput('9')">9</button>
           <button onclick="operator('/'), clearDisplay()">/</button>
         </div>
 
         <div>
-          <button onclick="appendToDisplay('4')">4</button>
-          <button onclick="appendToDisplay('5')">5</button>
-          <button onclick="appendToDisplay('6')">6</button>
+          <button onclick="addToInput('4')">4</button>
+          <button onclick="addToInput('5')">5</button>
+          <button onclick="addToInput('6')">6</button>
           <button onclick="operator('*'), clearDisplay()">*</button>
         </div>
 
         <div>
-          <button onclick="appendToDisplay('1')">1</button>
-          <button onclick="appendToDisplay('2')">2</button>
-          <button onclick="appendToDisplay('3')">3</button>
+          <button onclick="addToInput('1')">1</button>
+          <button onclick="addToInput('2')">2</button>
+          <button onclick="addToInput('3')">3</button>
           <button onclick="operator('-'), clearDisplay()">-</button>
         </div>
 
         <div>
-          <button onclick="appendToDisplay('0')">0</button>
-          <button onclick="appendToDisplay('.')">.</button>
-          <button onclick="calculateResult(),clearDisplay2()">=</button>
+          <button onclick="addToInput('0')">0</button>
+          <button onclick="addToInput('.')">.</button>
+          <button onclick="calculateResult() ,clearDisplay2()">=</button>
           <button onclick="operator('+'), clearDisplay()">+</button>
         </div>
       </div>

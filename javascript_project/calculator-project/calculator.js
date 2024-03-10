@@ -1,11 +1,9 @@
 const display = document.getElementById("display");
 const powerButton = document.querySelector(".power-btn");
 const offOn = document.querySelector("[data-off-on]");
-// const buttons = document.querySelectorAll("#calculator button");
 
-const appendToDisplay = (value) => {
+const addToInput = (value) => {
   if (value === "." && display.value.includes(".")) {
-    // Prevent adding more than one decimal point
     return;
   }
   if (display.value.length < display.maxLength || value === ".") {

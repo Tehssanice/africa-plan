@@ -9,7 +9,7 @@ body {
 }
 
 #calculator {
-  width: 40%;
+  width: 30%;
   margin: 20px auto;
   border-radius: 15px;
   padding: 40px;
@@ -60,4 +60,8 @@ button {
 .disabled {
   pointer-events: none;
   opacity: 0.5;
+}
+
+h1 {
+  color: #fff;
 }
