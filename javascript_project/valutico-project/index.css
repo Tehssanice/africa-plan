@@ -1,10 +1,15 @@
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Manrope", sans-serif;
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  position: relative;
+}
+
+.icon-holder {
+  width: 15%;
 }
 
 img {
@@ -21,7 +26,10 @@ img {
 
 .container header {
   box-shadow: 1px 5px 6px -1px #e2e1e1;
-  padding: 12px 20px;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
 }
 
 header nav {
@@ -53,12 +61,20 @@ header nav ul {
   list-style: none;
 }
 
+header nav .btn-holder {
+  width: 15%;
+}
+
 header nav .btn-holder button {
   background-color: #6fc247;
   padding: 15px 19px;
   border: none;
+  width: 96%;
   color: #fff;
   border-radius: 9px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 section {
@@ -85,7 +101,7 @@ section .section-1 p {
 section .section-1 .double-btn-holder {
   display: flex;
   justify-content: space-around;
-  width: 42%;
+  width: 37%;
   margin: 10px auto;
 }
 
@@ -96,6 +112,11 @@ section .section-1 .double-btn-holder button {
   color: #fff;
   margin-top: 20px;
   border-radius: 9px;
+}
+
+section .section-1 .double-btn-holder .left-btn button {
+  display: flex;
+  align-items: center;
 }
 
 section .section-1 .double-btn-holder .right-btn button {
@@ -199,7 +220,8 @@ section .section-5 .top-row p {
 section .section-5 .lower-row {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
+  width: 87%;
+  margin: 30px auto;
   align-items: center;
 }
 
@@ -212,13 +234,14 @@ section .section-5 .lower-row .right-div {
 }
 
 section .section-5 .last-row {
-  width: 40%;
+  width: 15%;
   margin: 50px auto;
 }
 
 section .section-5 .last-row button {
   background-color: #6fc247;
   padding: 15px 19px;
+  display: flex;
   border: none;
   color: #fff;
   border-radius: 9px;
