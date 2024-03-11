@@ -60,3 +60,7 @@ const clearDisplay = () => {
 const clearDisplay2 = () => {
   display2.value = "";
 };
+
+display.addEventListener("input", function () {
+  this.value = this.value.replace(/\D/g, "");
+});

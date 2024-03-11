@@ -250,3 +250,116 @@ section .section-5 .last-row button {
 section .section-5 .lower-row .left-div h3 {
   margin-top: 60px;
 }
+
+@media only screen and (max-width: 600px) {
+  section {
+    margin: 20px auto;
+    width: 95%;
+  }
+
+  section .section-1 {
+    width: 95%;
+  }
+
+  section .section-1 h1 {
+    font-size: 27px;
+  }
+
+  section .section-1 p {
+    font-size: 15px;
+  }
+
+  section .section-1 .double-btn-holder {
+    width: 75%;
+    margin: 10px auto;
+  }
+
+  section .section-1 .double-btn-holder button {
+    background-color: #6fc247;
+    padding: 7px 10px;
+    border-radius: 5px;
+  }
+
+  section .section-1 .double-btn-holder button span {
+    font-size: 11px;
+  }
+
+  section .section-2 .big-image {
+    width: 95%;
+    margin: 40px auto;
+  }
+
+  section .section-3 h3 {
+    font-size: 23px;
+  }
+
+  section .section-3 p {
+    font-size: 13px;
+    line-height: 23px;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  section .section-4 p.paragraph {
+    width: 96%;
+    font-size: 14px;
+  }
+
+  section .section-4 ul {
+    flex-direction: column;
+    margin-block-start: 0px;
+    line-height: 25px;
+  }
+
+  section .section-4 ul li p {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  section .section-5 {
+    margin: 5px auto;
+    padding: 20px 10px;
+  }
+
+  section .section-5 .top-row {
+    margin-bottom: 50px;
+  }
+
+  section .section-5 .top-row p {
+    width: 100%;
+  }
+
+  section .section-5 .lower-row {
+    flex-direction: column;
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  section .section-5 .lower-row .left-div {
+    width: 97%;
+  }
+
+  section .section-5 .lower-row .left-div h3 {
+    margin-top: 45px;
+    margin: 0px;
+  }
+
+  section .section-5 .lower-row .left-div p {
+    font-size: 14px;
+  }
+
+  section .section-5 .lower-row .right-div {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  section .section-5 .last-row {
+    width: 58%;
+    margin: 40px auto;
+  }
+
+  section .section-5 .last-row button {
+    padding: 9px 19px;
+    border-radius: 5px;
+  }
+}

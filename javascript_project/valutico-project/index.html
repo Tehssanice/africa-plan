@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -47,7 +47,6 @@
               <div class="icon-holder">
                 <img src="images/icon.svg" alt="" />
               </div>
-              <!-- <i class="fa-regular fa-square-check"></i> -->
             </button>
           </div>
         </nav>
@@ -71,7 +70,7 @@
               </button>
             </div>
             <div class="right-btn">
-              <button>Sign up / Login</button>
+              <button><span>Sign up / Login</span></button>
             </div>
           </div>
         </div>
@@ -87,7 +86,7 @@
 
       <section>
         <div class="section-3">
-          <h3>Trusted byHundreds of Finanacial Firms in 75 Countries</h3>
+          <h3>Trusted by Hundreds of Finanacial Firms in 75 Countries</h3>
           <p>
             Our team of more than 50 employees is globally distributed and serves both national and international
             clients in over 75 countries
@@ -211,4 +210,176 @@
       </section>
     </div>
   </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Dropdown Navbar</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      .navbar {
+        background-color: coral; /* Changed background color to coral */
+        overflow: hidden;
+      }
+
+      .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: #f2f2f2;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: red;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown-btn {
+        display: none;
+        background-color: coral;
+        color: #fff;
+        border: none;
+        padding: 14px 16px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: 600px) {
+        .navbar a,
+        .dropdown .dropbtn {
+          display: none;
+        }
+
+        .navbar a.icon,
+        .dropdown .dropbtn.icon {
+          display: block;
+        }
+
+        .navbar.responsive a,
+        .dropdown.responsive .dropbtn {
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content {
+          width: 100%;
+        }
+
+        .navbar.responsive {
+          position: relative;
+        }
+
+        .navbar.responsive a.icon,
+        .dropdown.responsive .dropbtn.icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        .navbar.responsive a,
+        .navbar.responsive a.icon,
+        .dropdown.responsive .dropbtn,
+        .dropdown.responsive .dropbtn.icon {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+
+        .navbar.responsive .dropdown-content {
+          position: relative;
+        }
+
+        .dropdown-btn {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar" id="myNavbar">
+      <button class="dropdown-btn" onclick="myFunction()">☰</button>
+      <a href="#home">Home</a>
+      <a href="#news">News</a>
+      <div class="dropdown">
+        <button class="dropbtn">
+          Services
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#service1">Service 1</a>
+          <a href="#service2">Service 2</a>
+          <a href="#service3">Service 3</a>
+        </div>
+      </div>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myNavbar");
+        var btn = document.querySelector(".dropdown-btn");
+
+        if (x.className === "navbar") {
+          x.className += " responsive";
+        } else {
+          x.className = "navbar";
+        }
+
+        // Toggle button text
+        btn.textContent = x.className === "navbar responsive" ? "✕" : "☰ ";
+      }
+    </script>
+  </body>
 </html>
+4
