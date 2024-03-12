@@ -9,15 +9,11 @@ body {
 }
 
 .icon-holder {
-  width: 15%;
+  width: 14%;
 }
 
 img {
   width: 100%;
-}
-
-.container {
-  margin: 10px auto;
 }
 
 .fa-solid.fa-chevron-down {
@@ -26,7 +22,7 @@ img {
 
 .container header {
   box-shadow: 1px 5px 6px -1px #e2e1e1;
-  padding: 20px;
+  padding: 20px 80px;
   position: sticky;
   top: 0;
   background-color: #fff;
@@ -34,42 +30,52 @@ img {
 
 header nav {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 90%;
-  margin: 2px auto;
-  cursor: pointer;
-}
-
-header nav .image-holder {
-  width: 15%;
-}
-
-header nav .list-div {
-  width: 50%;
-  font-weight: 500;
-  color: rgb(66, 65, 65);
-}
-
-header nav .list-div li:first-child {
-  color: rgb(35, 35, 144);
+  align-items: center;
 }
 
 header nav ul {
   display: flex;
   justify-content: space-around;
+}
+
+.navbar {
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar li {
   list-style: none;
 }
 
-header nav .btn-holder {
-  width: 15%;
+.dropdown-btn {
+  display: none;
+  background-color: #fff;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
 }
 
-header nav .btn-holder button {
+header#myNavbar {
+  display: block;
+}
+
+header .image-holder {
+  width: 20%;
+}
+
+header .btn-holder button {
   background-color: #6fc247;
   padding: 15px 19px;
   border: none;
-  width: 96%;
   color: #fff;
   border-radius: 9px;
   display: flex;
@@ -251,7 +257,75 @@ section .section-5 .lower-row .left-div h3 {
   margin-top: 60px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 440px) {
+  .container header {
+    padding: 20px 20px 0px;
+  }
+
+  .container header#myNavbar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  header.navbar.responsive {
+    align-items: flex-start !important;
+  }
+
+  header nav {
+    flex-direction: column;
+  }
+
+  header nav ul {
+    display: block;
+    padding-inline-start: 0px;
+  }
+
+  header .btn-holder button {
+    padding: 10px 8px;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  header .image-holder {
+    margin-top: 10px;
+    width: 75%;
+  }
+
+  .navbar a {
+    padding: 8px 6px;
+  }
+
+  .navbar a,
+  .dropdown .dropbtn {
+    display: none;
+  }
+
+  .navbar a.icon,
+  .dropdown .dropbtn.icon {
+    display: block;
+  }
+
+  .navbar.responsive a,
+  .dropdown.responsive .dropbtn {
+    display: block;
+    text-align: left;
+  }
+
+  .navbar.responsive {
+    position: relative;
+  }
+
+  .navbar.responsive a.icon,
+  .dropdown.responsive .dropbtn.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .dropdown-btn {
+    display: block;
+  }
   section {
     margin: 20px auto;
     width: 95%;
@@ -300,6 +374,10 @@ section .section-5 .lower-row .left-div h3 {
     margin: 20px auto;
   }
 
+  section .section-3 .partners-image-holder .a-partner-image {
+    width: 30%;
+  }
+
   section .section-4 p.paragraph {
     width: 96%;
     font-size: 14px;
@@ -307,7 +385,7 @@ section .section-5 .lower-row .left-div h3 {
 
   section .section-4 ul {
     flex-direction: column;
-    margin-block-start: 0px;
+    padding-inline-start: 10px;
     line-height: 25px;
   }
 
@@ -361,5 +439,202 @@ section .section-5 .lower-row .left-div h3 {
   section .section-5 .last-row button {
     padding: 9px 19px;
     border-radius: 5px;
+  }
+}
+
+@media (min-width: 441px) and (max-width: 840px) {
+  .container header#myNavbar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  header.navbar.responsive {
+    align-items: flex-start !important;
+  }
+
+  header nav {
+    flex-direction: column;
+  }
+
+  header nav ul {
+    display: block;
+    padding-inline-start: 0px;
+  }
+
+  header .btn-holder button {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  header .image-holder {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .navbar a {
+    padding: 8px 6px;
+  }
+
+  .navbar a,
+  .dropdown .dropbtn {
+    display: none;
+  }
+
+  .navbar a.icon,
+  .dropdown .dropbtn.icon {
+    display: block;
+  }
+
+  .navbar.responsive a,
+  .dropdown.responsive .dropbtn {
+    display: block;
+    text-align: left;
+  }
+
+  .navbar.responsive {
+    position: relative;
+  }
+
+  .dropdown-btn {
+    display: block;
+  }
+  section {
+    width: 95%;
+  }
+
+  section .section-1 {
+    width: 95%;
+  }
+
+  section .section-1 h1 {
+    font-size: 45px;
+  }
+
+  section .section-1 p {
+    font-size: 17px;
+  }
+
+  section .section-1 .double-btn-holder {
+    width: 60%;
+  }
+
+  section .section-1 .double-btn-holder button span {
+    font-size: 11px;
+  }
+
+  section .section-3 h3 {
+    font-size: 23px;
+  }
+
+  section .section-3 p {
+    font-size: 13px;
+    line-height: 23px;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  section .section-3 .partners-image-holder .a-partner-image {
+    width: 30%;
+  }
+
+  section .section-4 p.paragraph {
+    width: 96%;
+    font-size: 14px;
+  }
+
+  section .section-4 ul {
+    flex-direction: column;
+  }
+
+  section .section-4 ul li p {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  section .section-5 .top-row p {
+    width: 100%;
+  }
+
+  section .section-5 .lower-row {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  section .section-5 .lower-row .left-div {
+    width: 97%;
+  }
+
+  section .section-5 .lower-row .left-div h3 {
+    margin: 0px;
+  }
+
+  section .section-5 .lower-row .right-div {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  section .section-5 .last-row {
+    width: 37%;
+  }
+}
+
+@media (min-width: 841px) and (max-width: 1229px) {
+  .container header {
+    padding: 20px 45px;
+  }
+
+  header .btn-holder button {
+    padding: 9px;
+    border-radius: 7px;
+  }
+
+  .navbar a {
+    padding: 14px 12px;
+  }
+
+  section .section-1 h1 {
+    font-weight: 800;
+    font-size: 38px;
+  }
+
+  section .section-1 p {
+    font-size: 17px;
+  }
+
+  section .section-1 .double-btn-holder {
+    width: 60%;
+  }
+
+  section .section-5 .top-row {
+    margin-bottom: 50px;
+  }
+
+  section .section-5 .top-row p {
+    width: 100%;
+  }
+
+  section .section-5 .lower-row {
+    flex-direction: column;
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  section .section-5 .lower-row .left-div {
+    width: 97%;
+  }
+
+  section .section-5 .lower-row .left-div h3 {
+    margin-top: 45px;
+    margin: 0px;
+  }
+
+  section .section-5 .lower-row .right-div {
+    width: 70%;
+    margin-top: 20px;
+  }
+
+  section .section-5 .last-row {
+    width: 25%;
   }
 }

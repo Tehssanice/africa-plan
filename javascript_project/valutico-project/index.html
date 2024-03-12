@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,37 +18,51 @@
   </head>
   <body>
     <div class="container">
-      <header>
+      <header class="navbar" id="myNavbar">
+        <div class="hamburger">
+          <button class="dropdown-btn" onclick="myFunction()">☰</button>
+        </div>
         <nav>
           <div class="image-holder">
             <img src="images/logo.svg" alt="Logo" />
           </div>
-          <div class="list-div">
-            <ul>
-              <li>Home</li>
-              <li>
+
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">
                 Solutions
                 <i class="fa-solid fa-chevron-down"></i>
-              </li>
-              <li>
-                Your Work
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Your work
                 <i class="fa-solid fa-chevron-down"></i>
-              </li>
-              <li>
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
                 Company
                 <i class="fa-solid fa-chevron-down"></i>
-              </li>
-            </ul>
-          </div>
-          <div class="btn-holder">
-            <button class="btn">
-              <span> Request a Demo </span>
+              </a>
+            </li>
+          </ul>
+          <a href="#">
+            <div class="btn-holder">
+              <button class="btn">
+                <span> Request a Demo </span>
 
-              <div class="icon-holder">
-                <img src="images/icon.svg" alt="" />
-              </div>
-            </button>
-          </div>
+                <div class="icon-holder">
+                  <img src="images/icon.svg" alt="" />
+                </div>
+              </button>
+            </div>
+          </a>
         </nav>
       </header>
 
@@ -209,161 +223,6 @@
         </div>
       </section>
     </div>
-  </body>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mobile Dropdown Navbar</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: "Arial", sans-serif;
-      }
-
-      .navbar {
-        background-color: coral; /* Changed background color to coral */
-        overflow: hidden;
-      }
-
-      .navbar a {
-        float: left;
-        display: block;
-        color: #f2f2f2;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      .dropdown {
-        float: left;
-        overflow: hidden;
-      }
-
-      .dropdown .dropbtn {
-        font-size: 16px;
-        border: none;
-        outline: none;
-        color: #f2f2f2;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: inherit;
-        margin: 0;
-      }
-
-      .navbar a:hover,
-      .dropdown:hover .dropbtn {
-        background-color: red;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-      }
-
-      .dropdown-content a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: left;
-      }
-
-      .dropdown-content a:hover {
-        background-color: #ddd;
-      }
-
-      .dropdown-btn {
-        display: none;
-        background-color: coral;
-        color: #fff;
-        border: none;
-        padding: 14px 16px;
-        font-size: 16px;
-        cursor: pointer;
-      }
-
-      @media screen and (max-width: 600px) {
-        .navbar a,
-        .dropdown .dropbtn {
-          display: none;
-        }
-
-        .navbar a.icon,
-        .dropdown .dropbtn.icon {
-          display: block;
-        }
-
-        .navbar.responsive a,
-        .dropdown.responsive .dropbtn {
-          display: block;
-          text-align: left;
-        }
-
-        .dropdown-content {
-          width: 100%;
-        }
-
-        .navbar.responsive {
-          position: relative;
-        }
-
-        .navbar.responsive a.icon,
-        .dropdown.responsive .dropbtn.icon {
-          position: absolute;
-          right: 0;
-          top: 0;
-        }
-
-        .navbar.responsive a,
-        .navbar.responsive a.icon,
-        .dropdown.responsive .dropbtn,
-        .dropdown.responsive .dropbtn.icon {
-          float: none;
-          display: block;
-          text-align: left;
-        }
-
-        .navbar.responsive .dropdown-content {
-          position: relative;
-        }
-
-        .dropdown-btn {
-          display: block;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="navbar" id="myNavbar">
-      <button class="dropdown-btn" onclick="myFunction()">☰</button>
-      <a href="#home">Home</a>
-      <a href="#news">News</a>
-      <div class="dropdown">
-        <button class="dropbtn">
-          Services
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="#service1">Service 1</a>
-          <a href="#service2">Service 2</a>
-          <a href="#service3">Service 3</a>
-        </div>
-      </div>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
 
     <script>
       function myFunction() {
@@ -376,10 +235,8 @@
           x.className = "navbar";
         }
 
-        // Toggle button text
         btn.textContent = x.className === "navbar responsive" ? "✕" : "☰ ";
       }
     </script>
   </body>
 </html>
-4
