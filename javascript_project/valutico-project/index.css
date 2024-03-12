@@ -257,7 +257,7 @@ section .section-5 .lower-row .left-div h3 {
   margin-top: 60px;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
   .container header {
     padding: 20px 20px 0px;
   }
@@ -344,14 +344,14 @@ section .section-5 .lower-row .left-div h3 {
   }
 
   section .section-1 .double-btn-holder {
-    width: 75%;
+    width: 80%;
     margin: 10px auto;
   }
 
   section .section-1 .double-btn-holder button {
     background-color: #6fc247;
-    padding: 7px 10px;
-    border-radius: 5px;
+    padding: 10px 15px;
+    border-radius: 9px;
   }
 
   section .section-1 .double-btn-holder button span {
@@ -375,7 +375,7 @@ section .section-5 .lower-row .left-div h3 {
   }
 
   section .section-3 .partners-image-holder .a-partner-image {
-    width: 30%;
+    width: 40%;
   }
 
   section .section-4 p.paragraph {
@@ -408,7 +408,7 @@ section .section-5 .lower-row .left-div h3 {
   }
 
   section .section-5 .lower-row {
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 95%;
     margin: 10px auto;
   }
@@ -442,7 +442,7 @@ section .section-5 .lower-row .left-div h3 {
   }
 }
 
-@media (min-width: 481px) and (max-width: 840px) {
+@media (min-width: 601px) and (max-width: 840px) {
   .container header#myNavbar {
     display: flex;
     justify-content: space-between;
@@ -557,21 +557,37 @@ section .section-5 .lower-row .left-div h3 {
   }
 
   section .section-5 .lower-row {
-    flex-direction: column;
-    width: 95%;
+    /* flex-direction: column-reverse; */
+    width: 100%;
+  }
+
+  section .section-5 .last-row button {
+    padding: 11px 14px;
   }
 
   section .section-5 .lower-row .left-div {
-    width: 97%;
+    /* width: 97%; */
+    width: 45%;
   }
 
   section .section-5 .lower-row .left-div h3 {
     margin: 0px;
+    font-size: 16px;
+  }
+
+  section .section-5 .lower-row .left-div p {
+    font-size: 12px;
+    padding-bottom: 20px;
   }
 
   section .section-5 .lower-row .right-div {
-    width: 90%;
+    /* width: 80%; */
+    width: 50%;
     margin-top: 20px;
+  }
+
+  section .section-5 .lower-row .image-div img {
+    height: 370px;
   }
 
   section .section-5 .last-row {
@@ -615,7 +631,7 @@ section .section-5 .lower-row .left-div h3 {
   }
 
   section .section-5 .lower-row {
-    flex-direction: column;
+    flex-direction: row;
     width: 95%;
     margin: 10px auto;
   }
