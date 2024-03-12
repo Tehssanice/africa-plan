@@ -257,7 +257,7 @@ section .section-5 .lower-row .left-div h3 {
   margin-top: 60px;
 }
 
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 480px) {
   .container header {
     padding: 20px 20px 0px;
   }
@@ -442,7 +442,7 @@ section .section-5 .lower-row .left-div h3 {
   }
 }
 
-@media (min-width: 441px) and (max-width: 840px) {
+@media (min-width: 481px) and (max-width: 840px) {
   .container header#myNavbar {
     display: flex;
     justify-content: space-between;
