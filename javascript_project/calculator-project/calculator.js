@@ -1,4 +1,5 @@
 const display = document.getElementById("display");
+const display2 = document.getElementById("display2");
 const powerButton = document.querySelector(".power-btn");
 const offOn = document.querySelector("[data-off-on]");
 
@@ -16,15 +17,26 @@ const operator = (value) => {
   return (display2.value = plus);
 };
 
-const buttons = document.querySelectorAll("button");
-
-offOn.addEventListener("click", () => {
+function toggleOnOff() {
+  const buttons = document.querySelectorAll("button");
   buttons.forEach((button) => {
     if (button !== offOn) {
       button.classList.toggle("disabled");
     }
-    togglePower();
   });
+  if (offOn.textContent === "OFF") {
+    offOn.textContent = "ON";
+    display.value = "";
+    display2.value = "";
+    display.placeholder = "";
+  } else {
+    offOn.textContent = "OFF";
+    display.placeholder = "0";
+  }
+}
+
+offOn.addEventListener("click", () => {
+  toggleOnOff();
 });
 
 const calculateResult = () => {
@@ -33,19 +45,6 @@ const calculateResult = () => {
     display.value = result;
   } catch (error) {
     display.value = "Error";
-  }
-};
-
-const togglePower = () => {
-  const isCalculatorOn = !display.disabled;
-
-  if (isCalculatorOn) {
-    display.disabled = true;
-    display.value = "";
-    powerButton.textContent = "OFF";
-  } else {
-    display.disabled = false;
-    powerButton.textContent = "ON";
   }
 };
 

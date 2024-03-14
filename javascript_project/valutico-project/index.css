@@ -260,12 +260,14 @@ section .section-5 .lower-row .left-div h3 {
 @media only screen and (max-width: 600px) {
   .container header {
     padding: 20px 20px 0px;
+    position: sticky;
   }
 
   .container header#myNavbar {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
+    position: sticky;
   }
 
   header.navbar.responsive {
