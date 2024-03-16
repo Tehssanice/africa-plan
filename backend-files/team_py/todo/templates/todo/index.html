@@ -4,12 +4,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo App</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-  </head>
-  <body>
-    <h1>Todo App</h1>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-    <h2>{{FirstName}} {{LastName}}</h2>
+    <title>Todo App</title>
+    <link rel="stylesheet" href="{% static './css/tailwind.css' %}" />
+  </head>
+
+  <body class="min-h-screen grid place-content-center radial-blue">
+    <div class="container">
+      <h1>Todo App</h1>
+
+      <h2>{{first_name}} {{last_name}}</h2>
+
+      <div class="bg-emerald-500 w-52 h-52 rounded-full shadow-2xl grid place-content-center">
+        <div class="bg-teal-200 w-32 h-32 rounded-full grid place-content-center">
+          <div class="bg-red-500 w-16 h-16 rounded-full"></div>
+        </div>
+      </div>
+
+      <!-- <a href="register.html">Register</a> -->
+      <a href="{% url 'register' %}">Register</a>
+    </div>
   </body>
 </html>

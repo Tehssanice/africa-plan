@@ -9,4 +9,8 @@ def index(request):
     LastName = "Onah"
 
     context = {"first_name": FirstName,  "last_name": LastName}
-    return render(request, 'todo/index.html', context)
+    return render(request, './todo/index.html', context)
+
+
+def register(request):
+    return render(request, './todo/register.html')
