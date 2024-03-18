@@ -5,23 +5,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register Page</title>
+    <title>Login Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
     <link rel="stylesheet" href="{% static './css/tailwind.css' %}" />
   </head>
+
   <body class="min-h-screen grid place-content-center radial-blue">
     <div class="container">
-      <h2>Register Page</h2>
+      <h2>Login Page</h2>
       <a href="{% url 'index' %}">Home</a>
       <br />
-      <a href="{% url 'login' %}">Login</a>
+      <a href="{% url 'register' %}">Register</a>
 
       <div class="form">
-        <input type="text" placeholder="Firstname" />
-        <input type="text" placeholder="Lastname" />
+        <input type="text" placeholder="Username" />
         <input type="email" placeholder="Email" />
-        <button>Register</button>
+        <input type="password" placeholder="Password" />
+        <button>Login</button>
       </div>
     </div>
   </body>

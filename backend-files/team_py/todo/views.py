@@ -14,3 +14,7 @@ def index(request):
 
 def register(request):
     return render(request, './todo/register.html')
+
+
+def login(request):
+    return render(request, './todo/login.html')

@@ -1,8 +1,6 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
-/* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
+/*
+! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
+*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -546,15 +544,19 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+
 * {
   font-family: "Courier New", Courier, monospace;
 }
 
 .radial-blue {
-  background: radial-gradient(lightyellow, skyblue);
+  background: radial-gradient(lightyellow, rgb(135, 235, 168));
 }
 
 body {
   color: #000;
-  font-size: 96px;
+  font-size: 20px;
 }
