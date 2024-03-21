@@ -37,6 +37,21 @@ class Restaurant:
             f"The restaurant has served after increment {self.number_served} customers")
 
 
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, cuisine_type):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = ['vanilla', 'milk', 'strawberry']
+
+    def display_flavors(self):
+        print("The flavours: ")
+        for flavor in self.flavors:
+            print(f"\t {flavor}", end=" ")
+
+
+ice_cream_stand = IceCreamStand("Ice Cream Paradise", "Ice Cream Shop")
+
+# ice_cream_stand.display_flavors()
+
 restaurant = Restaurant("Open Sharton", "African")
 # print(restaurant.number_served)
 # restaurant.set_number_served(19)
@@ -76,8 +91,25 @@ class User:
             f"The number of login attempts after reset is {self.login_attempts}")
 
 
-person_1 = User("Jane", "Dan", 34, "Female")
-# person_1.increment_login_attempts()
+class Show_priviledges:
+    def __init__(self):
+        self.priviledges = ["can add post", "can delete post", "can ban user"]
+
+        def show_priviledges(self):
+            print("List of priviledges:")
+            for priviledge in self.priviledges:
+                print(f"\t{priviledge}")
+
+
+class Admin(User):
+    def __init__(self, first_name, last_name, age, gender):
+        super().__init__(first_name, last_name, age, gender)
+
+        self.show_priviledges = Show_priviledges()
+
+
+person_1 = Admin("Jane", "Dan", 34, "Female")
+person_1.show_priviledges()
 # person_1.reset_login_attempts()
 
 
@@ -171,17 +203,33 @@ old_car = Car("Peugeot", 408, 1970)
 ####################################
 # Inheritance
 
+class Battery:
+    """A simple attempt to model a battery for an electric car."""
+
+    def __init__(self, battery_size=75):
+        """Initialize the battery's attributes."""
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+    def get_range(self):
+        """Print a statement about the range this battery provides."""
+        if self.battery_size == 75:
+            range = 260
+        elif self.battery_size == 100:
+            range = 315
+        print(f"This car can go about {range} miles on a full charge.")
+
+
 class ElectricCar(Car):
     """Represent aspects of a car, specific to electric vehicles."""
 
     def __init__(self, make, model, year):
         """Initialize attributes of the parent class."""
         super().__init__(make, model, year)
-        self.battery_size = 75
-
-    def describe_battery(self):
-        """Print a statement describing the battery size."""
-        print(f"This car has a {self.battery_size}-kWh battery.")
+        self.battery = Battery()
 
     def fill_gas_tank(self):
         """Electric cars don't have gas tanks."""
@@ -189,5 +237,6 @@ class ElectricCar(Car):
 
 
 my_tesla = ElectricCar('tesla', 'model s', 2019)
-print(my_tesla.get_descriptive_name())
-my_tesla.describe_battery()
+# print(my_tesla.get_descriptive_name())
+# my_tesla.battery.describe_battery()
+# my_tesla.battery.get_range()
