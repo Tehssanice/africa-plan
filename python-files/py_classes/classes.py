@@ -27,12 +27,20 @@ class Restaurant:
     def open_restaurant(self):
         print(f"{self.retaurant_name} is open")
 
-    def clients_served(self):
+    def set_number_served(self, number_served):
+        self.number_served = number_served
         print(f"The restaurant has served {self.number_served} customers")
+
+    def increment_number_served(self):
+        self.number_served += 1
+        print(
+            f"The restaurant has served after increment {self.number_served} customers")
 
 
 restaurant = Restaurant("Open Sharton", "African")
-restaurant.clients()
+# print(restaurant.number_served)
+# restaurant.set_number_served(19)
+# restaurant.increment_number_served()
 
 # restaurant.describe_restaurant()
 # restaurant.open_restaurant()
@@ -50,6 +58,7 @@ class User:
         self.last_name = last_name
         self.age = age
         self.gender = gender
+        self.login_attempts = 0
 
     def describe_user(self):
         print(f"{self.first_name}'s Bio: \n Full name: {self.first_name} { self.last_name} \n Age: {self.age}  \n Gender: {self.gender}")
@@ -57,9 +66,21 @@ class User:
     def greet_user(self):
         print(f"Hello {self.first_name}, you're welcome")
 
+    def increment_login_attempts(self):
+        self.login_attempts += 1
+        print(f"The number of login attempts is {self.login_attempts}")
 
-# person_1 = User("Jane", "Dan", 34, "Female")
-# person_1.describe_user()
+    def reset_login_attempts(self):
+        self.login_attempts = 0
+        print(
+            f"The number of login attempts after reset is {self.login_attempts}")
+
+
+person_1 = User("Jane", "Dan", 34, "Female")
+# person_1.increment_login_attempts()
+# person_1.reset_login_attempts()
+
+
 # person_1.greet_user()
 # print("///////////////")
 
@@ -77,6 +98,7 @@ class User:
 # person_4.describe_user()
 # person_4.greet_user()
 # print("//////////////")
+
 
 class Car:
     def __init__(self, make, model, year):
@@ -144,3 +166,28 @@ my_new_car.update_odometer(0)
 
 old_car = Car("Peugeot", 408, 1970)
 # old_car.date_difference(2024)
+
+
+####################################
+# Inheritance
+
+class ElectricCar(Car):
+    """Represent aspects of a car, specific to electric vehicles."""
+
+    def __init__(self, make, model, year):
+        """Initialize attributes of the parent class."""
+        super().__init__(make, model, year)
+        self.battery_size = 75
+
+    def describe_battery(self):
+        """Print a statement describing the battery size."""
+        print(f"This car has a {self.battery_size}-kWh battery.")
+
+    def fill_gas_tank(self):
+        """Electric cars don't have gas tanks."""
+        print("This car doesn't need a gas tank!")
+
+
+my_tesla = ElectricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())
+my_tesla.describe_battery()
