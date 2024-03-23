@@ -8,10 +8,10 @@ class Human:
 
 
 clara = Human("Nigeria", "Female")
-# print(clara.sleep())
+print(clara.sleep())
 
 david = Human("Nigeria", "Male")
-# print(david.gender)
+print(david.gender)
 
 
 class Restaurant:
@@ -50,21 +50,21 @@ class IceCreamStand(Restaurant):
 
 ice_cream_stand = IceCreamStand("Ice Cream Paradise", "Ice Cream Shop")
 
-# ice_cream_stand.display_flavors()
+ice_cream_stand.display_flavors()
 
 restaurant = Restaurant("Open Sharton", "African")
-# print(restaurant.number_served)
-# restaurant.set_number_served(19)
-# restaurant.increment_number_served()
+print(restaurant.number_served)
+restaurant.set_number_served(19)
+restaurant.increment_number_served()
 
-# restaurant.describe_restaurant()
-# restaurant.open_restaurant()
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
 
 restaurant_2 = Restaurant("Roots", "Italian")
-restaurant3 = Restaurant("Octopus", "Chinese")
+restaurant_2.describe_restaurant()
 
-# restaurant_2.describe_restaurant()
-# restaurant3.describe_restaurant()
+restaurant3 = Restaurant("Octopus", "Chinese")
+restaurant3.describe_restaurant()
 
 
 class User:
@@ -95,10 +95,10 @@ class Show_priviledges:
     def __init__(self):
         self.priviledges = ["can add post", "can delete post", "can ban user"]
 
-        def show_priviledges(self):
-            print("List of priviledges:")
-            for priviledge in self.priviledges:
-                print(f"\t{priviledge}")
+    def show_priviledges(self):
+        print("List of priviledges:")
+        for priviledge in self.priviledges:
+            print(f"\t{priviledge}")
 
 
 class Admin(User):
@@ -109,27 +109,26 @@ class Admin(User):
 
 
 person_1 = Admin("Jane", "Dan", 34, "Female")
-person_1.show_priviledges()
-# person_1.reset_login_attempts()
+person_1.show_priviledges.show_priviledges()
 
+person_1.reset_login_attempts()
+person_1.greet_user()
+print("///////////////")
 
-# person_1.greet_user()
-# print("///////////////")
+person_2 = User("Daniel", "June", 14, "Male")
+person_2.describe_user()
+person_2.greet_user()
+print("////////////////")
 
-# person_2 = User("Daniel", "June", 14, "Male")
-# person_2.describe_user()
-# person_2.greet_user()
-# print("////////////////")
+person_3 = User("David", "Nat", 89, "Male")
+person_3.describe_user()
+person_3.greet_user()
+print("///////////////")
 
-# person_3 = User("David", "Nat", 89, "Male")
-# person_3.describe_user()
-# person_3.greet_user()
-# print("///////////////")
-
-# person_4 = User("Liam", "Dan", 34, "Female")
-# person_4.describe_user()
-# person_4.greet_user()
-# print("//////////////")
+person_4 = User("Liam", "Dan", 34, "Female")
+person_4.describe_user()
+person_4.greet_user()
+print("//////////////")
 
 
 class Car:
@@ -167,37 +166,36 @@ class Car:
 
 
 my_new_car = Car('audi', 'a4', 2019)
-# print(my_new_car.get_descriptive_name())
+print(my_new_car.get_descriptive_name())
 
 my_new_car.odometer_reading = 50
-# my_new_car.read_odometer()
+my_new_car.read_odometer()
 
 my_new_car.update_odometer(570)
-# my_new_car.read_odometer()
+my_new_car.read_odometer()
 
 my_new_car.update_odometer(0)
-# my_new_car.read_odometer()
+my_new_car.read_odometer()
 
 #########################################
 # drive car
-# print(f"Is my new car moving {my_new_car.moving}")
+print(f"Is my new car moving {my_new_car.moving}")
 
-# my_new_car.drive_car()
-# try:
-#     while my_new_car.moving:
-#         my_new_car.increase_odometer(10)
+my_new_car.drive_car()
+try:
+    while my_new_car.moving:
+        my_new_car.increase_odometer(10)
 
-# except KeyboardInterrupt:
-# with open("speed.txt", "w") as file:
-#     odometer = my_new_car.odometer_reading
-#     file.write(str(odometer))
-# my_new_car.read_odometer()
+except KeyboardInterrupt:
+    with open("speed.txt", "w") as file:
+        odometer = my_new_car.odometer_reading
+        file.write(str(odometer))
 
-# my_new_car.read_odometer()
+my_new_car.read_odometer()
 
 
 old_car = Car("Peugeot", 408, 1970)
-# old_car.date_difference(2024)
+old_car.date_difference(2024)
 
 
 ####################################
@@ -235,8 +233,20 @@ class ElectricCar(Car):
         """Electric cars don't have gas tanks."""
         print("This car doesn't need a gas tank!")
 
+    def upgrade_battery(self):
+        if self.battery.battery_size != 100:
+            self.battery.battery_size = 100
+
 
 my_tesla = ElectricCar('tesla', 'model s', 2019)
-# print(my_tesla.get_descriptive_name())
-# my_tesla.battery.describe_battery()
-# my_tesla.battery.get_range()
+
+
+print(my_tesla.get_descriptive_name())
+my_tesla.battery.describe_battery()
+
+print("Before upgrading battery:")
+my_tesla.battery.get_range()
+
+my_tesla.upgrade_battery()
+print("\nAfter upgrading battery:")
+my_tesla.battery.get_range()
