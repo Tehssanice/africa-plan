@@ -21,8 +21,7 @@ users = {
     },
     2: {
         "name": "Lampard",
-        "age": 45,
-        "id": 2
+        "age": 45, "id": 2
     },
     3: {
         "name": "Mary",
