@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "fast-api-tut"
+name = "fast-api-dependencies"
 version = "0.1.0"
-description = "This is a fast-api tutorial using poetry"
+description = "This is a fast-api dependency"
 authors = ["Nwaru Chidubem Theresa <tessychidubem@gmail.com>"]
 readme = "README.md"
 

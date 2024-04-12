@@ -2,11 +2,13 @@ from pydantic import BaseModel
 from fastapi import FastAPI, Query, Path
 from enum import Enum
 from typing import Annotated
-from routers import main_2
+from routers import main_2, cookie, main_3
 
 
 app = FastAPI()
 app.include_router(main_2.router)
+app.include_router(cookie.cookie_route)
+app.include_router(main_3.field)
 
 
 database = {
@@ -26,7 +28,7 @@ database = {
 class Colours(str, Enum):
     teal = "teal"
     brown = "brown"
-    paleyelllow = "paleyelllow"
+    paleyellow = "paleyellow"
 
 
 @app.get("/")
@@ -54,7 +56,7 @@ def patch_root():
     return {"People": "I made a patch request"}
 
 
-#################################
+#####################################
 
 # Path Parameters
 
@@ -83,7 +85,7 @@ def get_colours(colour_name: Colours):
     return {f"{colour_name.name}, is a beautiful color"}
 
 
-#####################################
+########################################
  # Query parameters
 
 
@@ -111,7 +113,7 @@ async def read_item(item_id: str, q: str | None = None, short: bool = False):
     return item
 
 
-#####################################
+#######################################
 # Request body
 
 
@@ -127,7 +129,7 @@ async def create_item(item: Item):
     return item
 
 
-@app.post("/items/")
+@app.post("/sight/")
 async def create_item(item: Item):
     item_dict = item.model_dump()
     if item.tax:
@@ -136,7 +138,7 @@ async def create_item(item: Item):
     return item_dict
 
 
-@app.put("/items/{item_id}")
+@app.put("/length/{length_id}")
 async def update_item(item_id: int, item: Item):
     return {"item_id": item_id, ** item.model_dump()}
 
@@ -149,10 +151,10 @@ async def update_item(item_id: int, item: Item, q: str | None = None):
     return result
 
 
-##################################
+#########################################
 # Query Parameters and String Validations
 
-@app.get("/items/")
+@app.get("/feel/")
 async def read_items(q: str | None = None):
     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
     if q:
@@ -160,7 +162,7 @@ async def read_items(q: str | None = None):
     return results
 
 
-@app.get("/items/")
+@app.get("/dent/")
 async def read_items(q: Annotated[str | None, Query(max_length=50)] = None):
     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
     if q:
@@ -180,7 +182,7 @@ async def read_items(
     return results
 
 
-@app.get("/items/")
+@app.get("/jump/")
 async def read_items(q: Annotated[str, Query(min_length=3)]):
     results = {"items": [{"item_id": "Foo"}, {"item_id": "Bar"}]}
     if q:
@@ -188,16 +190,16 @@ async def read_items(q: Annotated[str, Query(min_length=3)]):
     return results
 
 
-@app.get("/items/")
+@app.get("/mince/")
 async def read_items(q: Annotated[list[str] | None, Query()] = None):
     query_items = {"q": q}
     return query_items
 
 
-#######################################
+#########################################
 # Path Parameters and Numeric Validations
 
-@app.post("/items/{item_id}", deprecated=True)
+@app.post("/list/{list_id}", deprecated=True)
 async def read_items(
     item_id: Annotated[int, Path(title="The ID of the item to get")],
     q: Annotated[str | None, Query(alias="item-query")] = None,
@@ -208,7 +210,7 @@ async def read_items(
     return results
 
 
-@app.get("/items/{item_id}")
+@app.get("/mark/{mark_id}")
 async def read_items(q: str, item_id: int = Path(title="The ID of the item to get")):
     results = {"item_id": item_id}
     if q:
@@ -216,7 +218,7 @@ async def read_items(q: str, item_id: int = Path(title="The ID of the item to ge
     return results
 
 
-@app.get("/items/{item_id}")
+@app.get("/grind/{grind_id}")
 async def read_items(
     item_id: Annotated[int, Path(title="The ID of the item to get")], q: str
 ):

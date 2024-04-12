@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException, Query, Path
 from pydantic import BaseModel, EmailStr
 from typing import Optional, Annotated
 from datetime import datetime
+from sqlmodel import SQLModel, Field, create_engine, Session
 
 router = APIRouter()
 
@@ -140,3 +141,32 @@ async def filter_rooms(category: str = Query(None, title="Category")):
     )
         if room["category"] == category]if category else list(rooms.values())
     return filtered_rooms
+
+
+class HeroCreate(SQLModel):
+    name: str
+    secret_name: str
+    age: int
+
+
+class Hero(HeroCreate, table=True):
+    id: int | None = Field(default=None, primary_key=True)
+
+
+sqlite_file_name = "database.db"
+sqlite_url = f"sqlite:///{sqlite_file_name}"
+
+engine = create_engine(sqlite_url, echo=True)
+
+SQLModel.metadata.create_all(engine)
+
+
+@router.post("/hero/")
+async def create_hero(hero: HeroCreate):
+    with Session(engine) as session:
+        hero_1 = Hero(name=hero.name,
+                      secret_name=hero.secret_name, age=hero.age)
+        session.add(hero_1)
+        session.commit()
+
+    return {"name": hero.name, "secret_name": hero.secret_name, "age": hero.age}
